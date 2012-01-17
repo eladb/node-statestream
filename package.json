@@ -8,6 +8,17 @@
     "type": "git",
     "url": "git@github.com:eladb/node-statestream.git"
   },
+  "tags": [
+      "comet",
+      "comets",
+      "state",
+      "stream",
+      "statestream",
+      "downstream",
+      "longpoll",
+      "long polling",
+      "203"
+  ],
   "main": "main.js",
   "scripts": {
     "test": "nodeunit test/"
