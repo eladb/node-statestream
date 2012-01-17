@@ -1,4 +1,4 @@
-# statestream
+# statestream [![Build Status](https://secure.travis-ci.org/eladb/node-statestream.png)](http://travis-ci.org/eladb/node-statestream)
 
 Really simple way to create HTTP streams of state and not just events.
 
