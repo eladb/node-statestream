@@ -2,7 +2,7 @@
   "author": "Elad Ben Israel <elad.benisrael@gmail.com>",
   "name": "statestream",
   "description": "Stream state changes of JSON objects easily",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/eladb/node-statestream",
   "repository": {
     "type": "git",

@@ -31,8 +31,32 @@ Returns a `function(req, res)` that will handle HTTP requests in the following w
  3. It will maintain an open connection to the client.
  4. It will write the contents of this object to the response stream when the object changes.
 
-`state` can either be an object or a synchronous function that returns the object to stream.
 `options.interval` defines the interval (in ms) for monitoring the state object (or the result of the function) for changes.
+
+`state` can either be an object or an asynchronous function that returns the new object to stream.
+
+Passing an object:
+
+```js
+var myobj = { x: 12 };
+var handler = statestream(myobj);
+// ...
+```
+
+Passing an async function:
+
+```js
+var asyncEval = function(cb) {
+	fs.readFile('state.json', function(err, data) {
+		if (err) return cb(err);
+		var o = JSON.parse(data);
+		return cb(null, o);
+	});
+};
+
+var handler = statestream(asyncEval);
+// ...
+```
 
 ### statestream.onchange(state, [options], callback) ###
 
